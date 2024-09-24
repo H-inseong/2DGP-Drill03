@@ -1,9 +1,11 @@
 from pico2d import *
 
 def run_rectangle():
+    print('rectangle')
     pass
 
 def run_circle():
+    print('circle')
     pass
 
 
