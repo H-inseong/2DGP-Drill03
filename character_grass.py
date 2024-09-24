@@ -6,15 +6,35 @@ open_canvas()
 grass = load_image('grass.png')
 boy = load_image('character.png')
 
+def run_top():
+    print('top')
+    pass
+
+def run_right():
+    print('right')
+    pass
+
+def run_bottom():
+    print('bottom')
+    pass
+
+def run_left():
+    print('left')
+    pass
 
 def run_rectangle():
     print('rectangle')
+    run_top()
+    run_right()
+    run_bottom()
+    run_left()
+
     pass
 
 def run_circle():
     print('circle')
 
-    r, cx, cy = 300 , 800 // 2, 600 // 2
+    r, cx, cy = 200 , 800 // 2, 600 // 2
 
     for d in range(270, -(90 + 1), -1):
         x = r * math.cos(math.radians(d)) + cx
@@ -26,7 +46,7 @@ def run_circle():
 
 while True:
     run_rectangle()
-    run_circle()
+ #   run_circle()
     break
 
 
