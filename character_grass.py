@@ -9,6 +9,7 @@ boy = load_image('character.png')
 def draw_boy(x,y):
     clear_canvas_now()
     boy.draw_now(x, y)
+    grass.draw_now(400, 0)
     delay(0.01)
 
 def run_top():
@@ -28,10 +29,16 @@ def run_left():
         draw_boy(50, y)
 
 def run_right_up():
-    pass
+    y = 50
+    for x in range(50,400, 10):
+        draw_boy(x, y)
+        y = y + 15 * math.sin(math.radians(60))
 
 def run_right_down():
-    pass
+    y = 300 * math.tan(math.radians(60))
+    for x in range(400,750, 10):
+        draw_boy(x, y)
+        y = y - 15 * math.sin(math.radians(60))
 
 
 def run_rectangle():
@@ -52,11 +59,10 @@ def run_triangle():
     run_bottom()
     run_right_up()
     run_right_down()
-    pass
 
 while True:
-    #run_rectangle()
-    #run_circle()
+    run_rectangle()
+    run_circle()
     run_triangle()
 
 close_canvas()
